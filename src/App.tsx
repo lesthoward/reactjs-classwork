@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from 'react';
+import SayHello from './components/SayHello';
+import SayHelloClass from './components/SayHelloClass';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+// This is a functional component
+const App:React.FC = () => {
+	return (
+		<Fragment>
+			<SayHello 
+				name='Lester Howard' 
+				age={20} 
+				email='lesthoward@gmail.com' 
+			/>
+
+			<hr />
+
+			<SayHelloClass
+				name='Unknown'
+				age={20} 
+				email='unknown@gmail.com' 
+			/>
+		</Fragment>
+	)
 }
 
 export default App;
+
+// class-based React Component
+// class App extends React.Component {
+// 	render() {
+// 		return (
+// 			<Fragment>
+// 				<h1>React</h1>
+// 				<h2>Class Numer #2</h2>
+// 			</Fragment>
+// 		)
+// 	}
+// }
+
+
+
