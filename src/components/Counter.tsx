@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const Counter:React.FC = () => {
+const Counter:React.FC = (props) => {
     const [count, setCount] = useState(0)
 
     return <>

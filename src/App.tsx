@@ -1,30 +1,28 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import SayHello from './components/SayHello';
 import SayHelloClass from './components/SayHelloClass';
-
-
-
+import Todo from './components/Todo';
 
 // This is a functional component
-const App:React.FC = () => {
+const App: React.FC = () => {
 	return (
 		<Fragment>
-			<SayHello 
-				name='Lester Howard' 
-				age={20} 
-				email='lesthoward@gmail.com' 
+			<Todo />
+
+			<hr />
+
+			<SayHello
+				name="Lester Howard"
+				age={20}
+				email="lesthoward@gmail.com"
 			/>
 
 			<hr />
 
-			<SayHelloClass
-				name='Unknown'
-				age={20} 
-				email='unknown@gmail.com' 
-			/>
+			<SayHelloClass name="Unknown" age={20} email="unknown@gmail.com" />
 		</Fragment>
-	)
-}
+	);
+};
 
 export default App;
 
@@ -39,6 +37,3 @@ export default App;
 // 		)
 // 	}
 // }
-
-
-

@@ -22,11 +22,11 @@ class SayHelloClass extends React.Component<SayHi, SayHiState> {
 		}));
 	}
 
-    increment(count: number) {
-        this.setState(prev => ({
-            counter: prev.counter + count
-        }))
-    }
+	increment(count: number) {
+		this.setState((prev) => ({
+			counter: prev.counter + count,
+		}));
+	}
 
 	render() {
 		const { name, age, address, email } = this.props;
@@ -41,10 +41,8 @@ class SayHelloClass extends React.Component<SayHi, SayHiState> {
 					<li>Email: {email}</li>
 				</ul>
 				<p>Count: {counter}</p>
-                <button onClick={ () => this.increment(-1) }>
-                Decrement -</button>
-				<button onClick={ () => this.increment(1) }>
-                Increment +</button>
+				<button onClick={() => this.increment(-1)}>Decrement -</button>
+				<button onClick={() => this.increment(1)}>Increment +</button>
 			</Fragment>
 		);
 	}
